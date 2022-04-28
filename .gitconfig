@@ -1,0 +1,16 @@
+[color]
+    ui = true
+    branch = true
+    diff = true
+    interactive = true
+    status = true
+[color "status"]
+    added = green
+    changed = red
+    deleted = red
+    untracked = yellow
+[user]
+	email = evan2804@users.noreply.github.com
+	name = Evan2804
+[push]
+    default = matching
