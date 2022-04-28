@@ -22,18 +22,12 @@ sudo rm -rf ~/.zshrc > /dev/null 2>&1
 # Create symlinks in the home folder
 # Allow overriding with files of matching names in the custom-configs dir
 #==============
-function create_symlink() {
-    if [[ -f "$HOME/Github/.dotfiles/$1" ]]; then
-        ln -s $HOME/Github/.dotfiles/$1 ~/$1
-    fi
-}
-
-create_symlink "Brewfile"
-create_symlink ".gitconfig"
-create_symlink ".tmux.conf"
-create_symlink ".vimrc"
-create_symlink ".zsh_prompt"
-create_symlink ".zshrc"
+ln -s $HOME/Github/.dotfiles/Brewfile ~/Brewfile
+ln -s $HOME/Github/.dotfiles/.gitconfig ~/.gitconfig
+ln -s $HOME/Github/.dotfiles/.tmux.conf ~/.tmux.conf
+ln -s $HOME/Github/.dotfiles/.vimrc ~/.vimrc
+ln -s $HOME/Github/.dotfiles/.zsh_prompt ~/.zsh_prompt
+ln -s $HOME/Github/.dotfiles/.zshrc ~/.zshrc
 
 #==============
 # Install brew packages/tools
